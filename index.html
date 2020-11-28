@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
-<title>Andy Chen</title>
+<title>Andy Chen's Personal Page</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Welcome to Andy Chen's personal page! He is an aspiring computer science student at TJHSST interested in research and problem solving.">
+<meta name="robots" content="index, follow">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="custom.css">
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="icon" type="image/icon" href="images/favicon.ico">
 <link rel="manifest" href="site.webmanifest">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
   height: 100%;
-  color: #777;
+  color: #111;
   line-height: 1.8;
+  background: #ffe6d0;
 }
 
 /* Create a Parallax Effect */
@@ -24,36 +27,36 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  height: 100%;
 }
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url("images/background2.jpg");
-  min-height: 100%;
+  background-image: url("images/background5.jpg");
 }
+/* Image Credit: u/NathanielMerz, nathanielmerz.com */
 
 /* Second image (Portfolio) */
 .bgimg-2 {
   background-image: url("images/background3.jpg");
-  min-height: 400px;
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
   background-image: url("images/coffee.png");
-  min-height: 400px;
 }
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
 /* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
+/*@media only screen and (max-device-width: 1600px) {
   .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: scroll;
     min-height: 400px;
   }
-}
+}*/
 </style>
 <body>
 
@@ -63,13 +66,10 @@ body, html {
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#home" class="w3-bar-item w3-button"> HOME</a>
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -77,16 +77,18 @@ body, html {
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
     <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">ANDY CHEN</span>
+    <div class="container">
+      <p id="cursortext"><b>I am <span class="typed-text"></span><span class="cursor">&nbsp;</span></b></p>
+    </div>
   </div>
 </div>
+<script src="cursor.js"></script>
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-32" id="about">
@@ -116,14 +118,24 @@ body, html {
   <p class="w3-center"><em>Here are some of my latest projects.<br> Click on the links for more info.</em></p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <p class = "w3-left">Using Agent-based Simulations with Latent Dirichlet Allocation Topic Modeling on Mobile Location Data to Prescribe COVID-19 Interventions <br><a href="files/lda.pdf" target="_blank">(symposium archive link)</a> <a href="https://github.com/agcdragon/safegraph-simulation" target="_blank">(code base)</a></p>
+  <div class="w3-center w3-section">
+    <p class = "w3-center">Data-Driven Mobility Models for COVID-19 Simulation <a href="https://dl.acm.org/doi/abs/10.1145/3423455.3430305" target="_blank">(published research paper)</a> <a href="https://github.com/jpes707/safegraph-simulation" target="_blank">(code base)</a></p>
   </div>
-  <div class="w3-row-padding w3-center w3-section">
-    <p class = "w3-left">Ensemble Learning Interpretation of COVID-19 Simulation Models Through Clustering Latent Feature Representations and Aggregated Time-Series Forecasts with Deep Learning <br><a href="files/cluster.pdf" target="_blank">(symposium archive link)</a></p>
+
+  <div class="w3-center w3-section">
+    <p class = "w3-center">Ensemble Learning Interpretation of COVID-19 Models Through Clustering Latent Feature Representations <a href="files/cluster.pdf" target="_blank">(symposium archive link)</a></p>
   </div>
-  <div class="w3-row-padding w3-center">
-    <p class = "w3-left">TJCTF 2020 Organizer, Problem Writer <a href="https://tjctf.org" target="_blank">(competition website)</a></p>
+
+  <div class="w3-center w3-section">
+    <p class = "w3-center">Automatic Python Sudoku Solver <a href="https://github.com/agcdragon/sudoku-solver" target="_blank">(code base)</a></p>
+  </div>
+
+  <div class="w3-center w3-section">
+    <p class = "w3-center">Swim Team Manager Android App <a href="#portfolio">(in progress)</a></p>
+  </div>
+
+  <div class="w3-center w3-section">
+    <p class = "w3-center">TJCTF 2020 Organizer, Problem Writer <a href="https://tjctf.org" target="_blank">(competition website)</a></p>
   </div>
 </div>
 
@@ -179,7 +191,7 @@ body, html {
   <div class="w3-xlarge w3-section">
     <a href="https://www.facebook.com/andyyy8/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
     <a href="https://www.instagram.com/andygchen/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-    <a href="https://www.linkedin.com/in/andy-chen-6919b91b4/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/in/andy-g-chen/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
     <a href="https://github.com/agcdragon" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
     <a href="https://twitter.com/agcdragon_" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
 
