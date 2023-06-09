@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+
+.container {
+	
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	padding: 0.5rem;
+}
+.arrow-container {
+	
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	overflow: hidden;
+	padding: 4rem;
+}
+
+#cursortext {
+	font-family: 'Inconsolata', monospace;
+	font-size: 3rem;
+	font-weight: bold;
+	letter-spacing: .15rem;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+#nametext{
+	font-family: 'Inconsolata', monospace;
+	font-size: 5rem;
+	font-weight: bold;
+	letter-spacing: .15rem;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.typed-text {
+	color: #FFFFFF;
+}
+
+.cursor {
+	display: inline-block;
+	width: 3px;
+	background-color: #FFFFFF; 
+	margin-left: .1rem;
+	animation: blink 1s infinite;
+}
+
+.cursor.typing{
+	animation: none;
+}
+
+@keyframes blink {
+	0% { background-color: #FFFFFF; }
+	49% { background-color: #FFFFFF; }
+	50% { background-color: transparent; }
+	99% { background-color: transparentk; }
+	100% { background-color: #FFFFFF; }	
+}
+
+body,h1,h2,h3,h4,h5,h6 {
+	font-family: "Lato", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  color: #111;
+  line-height: 1.8;
+  background: #FFFFFF;
+  scroll-behavior: smooth;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 100%;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-color: black;
+  /* background-image: url("images/black.jpeg"); */
+}
+/* Image Credit: u/NathanielMerz, nathanielmerz.com */
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("images/background3.jpg");
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("images/coffee.png");
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 800px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+/* Arrow */
+.arrow {
+	border: solid rgb(203, 203, 203);
+	border-color: #ffffff;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 10px;
+	transform: rotate(45deg);
+  	-webkit-transform: rotate(45deg);
+  	transition: 0.3s;
+  	animation: bounce 3s infinite;
+  	margin: 20px;
+}
+
+.arrow:hover {
+	-webkit-animation-play-state: paused;
+	opacity: 60%;
+	transform: scale(1.25) rotate(45deg);
+}
+
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  40% {
+    transform: translateY(-30px) rotate(45deg);
+  }
+  60% {
+    transform: translateY(-15px) rotate(45deg);
+  }
+}
+
+
+/* Page structure */
+
+ #nav {
+	left: 0%;
+	right: 0%;
+	background-color: white;
+	position: fixed;
+	top: -70px;
+	display: block;
+	transition: top 0.4s;
+	box-shadow: 2px 2px 5px #aaaaaa;
+	z-index: 1;
+  }
+  
+  .homebot{
+	display: flex;
+	justify-content: center;
+	flex-direction: row-reverse;
+	background-color: #303030;
+	padding: 20px;
+  }
+  
+  
+  
+  /* .class-name {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: left;
+  } */
+  
+  .topnav {
+	display: flex;
+	justify-content: space-around;
+	border-bottom: 3px solid transparent;
+	background-color: white;
+	width: 100vw;
+	z-index: 9999;
+	box-shadow: 0px 4px 4px #BCBCBC;
+	left: 0%;
+	right: 0%;
+	display: block;
+  }
+  
+  .icon{
+	height: 100px;
+  }
+  
+  .botnav{
+	z-index: 9999;
+	display: flex;
+	justify-content: center;
+	flex-direction: row-reverse;
+	background-color: #303030;
+  }
+  /*
+  @media only screen and (max-width: 1024px) {
+	.home {
+	  display: none;
+	}
+  }
+  
+  @media only screen and (max-width: 600px) {
+	.navig {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: flex-start;
+	}
+  }
+  */
+  
+  /* FOR BUTTONS when the link is hovered over*/
+  a:link, a:visited,  a:hover, a:active {
+  /*     color: black; */
+	  text-decoration: none;
+  }
+  
+  /* .topnav a:hover {
+	border-bottom: 2px 2px solid darkgray;
+  } */
+  
+  .topnav a.active {
+	border-bottom: 2px solid darkgray;
+	flex-direction: row;
+  }
+  
+  .leftnav {
+	align-items: first;	
+	float: left;
+  }
+
+  .rightnav {
+	align-items: last;
+	float: right;
+  }
+
+  .navig {
+  /*   margin: 8px; */
+	padding: 18px 24px 18px 24px;
+	border-radius: 5px;
+	transition: 0.3s;
+	float: right;
+	font-size: 18px;
+	color: black;
+  }
+  
+  .navigbot{
+	padding: 0px 10px 0px 10px;
+	border-radius: 5px;
+	font-size: 18px;
+	color: white;
+  }
+
+  
+  .navig:hover {
+	background-color: #ECECEC;
+  }
+  
+  /* #side {
+	margin-right: 40px;
+  }
+   */
+  .headercontainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+.about {
+	height: 100%;
+}
+
+.portfolio {
+	height: 100%;
+}
+
+.contact {
+	height: 100%;
+}

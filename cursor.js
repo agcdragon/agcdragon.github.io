@@ -1,10 +1,21 @@
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["Andy Chen.", "a researcher.", "an adventurer.", "a problem solver.", "a learner."];
-const typingDelay = 175;
-const erasingDelay = 85;
-const newTextDelay = 1700;
+const textArray = [
+	"hi there!",
+	"I'm Andy", 
+	"nice to meet you!",
+	"currently studying CS at UC Berkeley", 
+	"go bears! 🐻", 
+	"I'm interested in ML & computer vision",
+	"I'm also a foodie", 
+	"a smiley face appreciator :)",
+	"and an avid gym goer!",
+	"Thanks for visiting <3"
+];
+const typingDelay = 150;
+const erasingDelay = 75;
+const newTextDelay = 1000;
 
 let textArrayIndex = 0;
 let charIndex = 0;
@@ -33,7 +44,7 @@ function erase() {
 		cursorSpan.classList.remove("typing");
 		textArrayIndex++;
 		if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-		setTimeout(type, typingDelay + 800);
+		setTimeout(type, typingDelay + 500);
 	}
 }
 
