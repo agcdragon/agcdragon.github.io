@@ -87,9 +87,7 @@ body, html {
 /* First image (Logo. Full height) */
 .bgimg-1 {
   background-color: black;
-  /* background-image: url("images/black.jpeg"); */
 }
-/* Image Credit: u/NathanielMerz, nathanielmerz.com */
 
 /* Second image (Portfolio) */
 .bgimg-2 {
@@ -263,10 +261,7 @@ body, html {
   .navig:hover {
 	background-color: #ECECEC;
   }
-  
-  /* #side {
-	margin-right: 40px;
-  }
+
    */
   .headercontainer {
 	display: flex;
