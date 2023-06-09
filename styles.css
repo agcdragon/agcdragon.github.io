@@ -276,12 +276,24 @@ body, html {
 
 .about {
 	height: 100%;
+	padding-top: 15vh!important;
+	padding-bottom: 32px!important;
+}
+
+.row {
+	display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .portfolio {
 	height: 100%;
+	padding-top: 15vh!important;
+	padding-bottom: 32px!important;
 }
 
 .contact {
 	height: 100%;
+	padding-top: 25vh!important;
+	padding-bottom: 32px!important;
 }
